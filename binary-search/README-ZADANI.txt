@@ -7,6 +7,7 @@ Testy vymyslete taky sami. - Není to test - Cíl je
     - zadání neříka jak vše řešit, to musíte domyslet
 
 
+
 příklad použiti:
 
     List<Integer> list = Arrays.asList(5, 6, 7);
