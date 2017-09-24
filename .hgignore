@@ -2,3 +2,6 @@ syntax: glob
 binary-search/.gradle/
 binary-search/.idea/
 binary-search/build/
+cache/.gradle/
+cache/.idea/
+cache/build/
