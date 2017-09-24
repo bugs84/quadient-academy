@@ -1,0 +1,4 @@
+syntax: glob
+binary-search/.gradle/
+binary-search/.idea/
+binary-search/build/
