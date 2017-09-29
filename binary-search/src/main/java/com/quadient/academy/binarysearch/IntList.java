@@ -22,21 +22,7 @@ public class IntList {
      *         otherwise, <tt>-1</tt>.
      */
     public int binarySearch(int itemToFind) {
-        int low = 0;
-        int high = list.size() - 1;
-
-        while (low <= high) {
-            int mid = (low + high) >>> 1;
-            int midVal = list.get(mid);
-
-            if (midVal < itemToFind)
-                low = mid + 1;
-            else if (midVal > itemToFind)
-                high = mid - 1;
-            else
-                return mid;
-        }
-        return -1;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
 }

@@ -1,11 +1,18 @@
-Implementujte metodu na binární vyhledávání. Samozřejmě s testy ;)
-Binární vyhledávání napište sami, nevolejte metody z žádné knihovny.
+Implementujte metodu na binární vyhledávání.
+Doimplementujte třídu "IntList"
+    Popis co má třída dělat je přímo uvnitř třídy.
+
+Cíl je napsat především sadu testů
+    ,která ověří, že se libovolná implementace chová správně.
+
+přesto však algoritmus na binární vyhhledávaní napište sami
+    ,nevolejte metody, které udělají binární vyhledávání za vás.
+
 
 Testy vymyslete taky sami. - Není to test - Cíl je
     - naučit se napsat test
-    - procvičit si a vyzkoušet, základy, jak testy mají vypadat
-    - zadání neříka jak vše řešit, to musíte domyslet
-
+    - vyzkoušet si given-when-then
+    - vyzkoušet si assertThat
 
 
 příklad použiti:
