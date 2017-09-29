@@ -5,3 +5,9 @@ binary-search/build/
 cache/.gradle/
 cache/.idea/
 cache/build/
+greeter/.gradle/
+greeter/.idea/
+greeter/build/
+roulette/.gradle/
+roulette/.idea/
+roulette/build/
