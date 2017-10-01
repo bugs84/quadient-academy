@@ -22,15 +22,15 @@ public class ExpensiveObjectCache {
 
     private void removeOldObjects() {
         long threshold = System.currentTimeMillis() - HOLD_TIME;
-        cache.removeIf(cachedObject -> cachedObject.addedTime < threshold);
+        cache.removeIf(cachedObject -> cachedObject.additionTime < threshold);
     }
 
     private class CachedObject {
-        long addedTime;
+        long additionTime;
         ExpensiveObject cachedObject;
 
         CachedObject(long addedTime, ExpensiveObject cachedObject) {
-            this.addedTime = addedTime;
+            this.additionTime = addedTime;
             this.cachedObject = cachedObject;
         }
     }
