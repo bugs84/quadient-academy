@@ -1,6 +1,6 @@
 package com.quadient.academy.cache;
 
-final public class ExpensiveObject {
+public class ExpensiveObject {
 
     private String id;
 
