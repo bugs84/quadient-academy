@@ -3,7 +3,7 @@ V projektu najdete třídu "ExpensiveObjectCache"
 třída má dvě metody:
 
     1) void add(ExpensiveObject expensiveObject)
-       -ta prida ExpensiveObject
+       -ta přidá ExpensiveObject
     2) Collection<ExpensiveObject> getCachedObjects()
        -ta vrati všechny objekty, ktere jsou v cachi kratší dobu, než 5 vteřin
 

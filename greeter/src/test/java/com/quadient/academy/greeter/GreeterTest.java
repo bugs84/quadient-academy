@@ -9,13 +9,13 @@ public class GreeterTest {
 
     @Test
     public void sayHelloForSimpleNameWorks() {
-        //given
+        // given
         Greeter greeter = new Greeter("John");
 
-        //when
+        // when
         String greeting = greeter.sayHello();
 
-        //then
+        // then
         assertThat(greeting, equalTo("Hello, John!"));
     }
 
