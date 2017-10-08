@@ -8,10 +8,12 @@ public class ExpensiveObjectCache {
 
     private static final long HOLD_TIME = 5 * 1000;
 
+    private TimeProvider timeProvider = new TimeProvider();
+
     private Collection<CachedObject> cache = new ArrayList<>();
 
     public synchronized void add(ExpensiveObject expensiveObject) {
-        CachedObject cachedObject = new CachedObject(System.currentTimeMillis(), expensiveObject);
+        CachedObject cachedObject = new CachedObject(timeProvider.getCurrentTime(), expensiveObject);
         cache.add(cachedObject);
     }
 
@@ -21,7 +23,7 @@ public class ExpensiveObjectCache {
     }
 
     private void removeOldObjects() {
-        long threshold = System.currentTimeMillis() - HOLD_TIME;
+        long threshold = timeProvider.getCurrentTime() - HOLD_TIME;
         cache.removeIf(cachedObject -> cachedObject.additionTime < threshold);
     }
 
@@ -37,3 +39,4 @@ public class ExpensiveObjectCache {
 
 
 }
+
