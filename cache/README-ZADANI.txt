@@ -12,7 +12,13 @@ třída má dvě metody:
     - na prvni verzi testů dáme třeba 15 minut
 
 2) diskuse/upravy testů
+   - jak dat objekt na poskytování času.
 
+3) upravit ExpensiveObject dat do konstruktoru Thread.sleep(10 * 1000)
+   - vysvetlit, ze pak to moc jednoduse nepujde
+   - casto taky potrebujeme cele servisy, ktere jentak nestvorime... Co s tim
+
+4) a dojit k tomu, ze uzasna vec jsou mocky - Mockito
 
 
 Nepovinný úkol navíc:
