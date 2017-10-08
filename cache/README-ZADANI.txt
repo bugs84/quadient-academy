@@ -20,6 +20,8 @@ třída má dvě metody:
 
 4) a dojit k tomu, ze uzasna vec jsou mocky - Mockito
 
+5) kdyztak mam priklad reseni, ale to bych ukazoval az nakonec
+
 
 Nepovinný úkol navíc:
   - Napsat testy, které odhalí případné chyby v synchronizaci.
