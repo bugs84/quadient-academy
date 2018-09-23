@@ -28,3 +28,20 @@ Nepovinný úkol navíc:
     (při přístupu k třídě z více vláken)
 
 
+
+
+
+RESENI:
+  - nejdriv zjisti, ze jim tam vadi ten System.currentTimeInMillis
+  - => musi vytvorit provider  (Tady se z toho jde dostat i pres joda-time, ale to nechcem)
+    1) v testu udelaji svoji implementaci providera, podstrci to tam a uz to jde.
+    2) Ale co s Expensive object.   =>  diskuse =>  mock
+    3) nedelat testovaci time provider => a taky ho namockovat
+
+  => v unitovych testech se mockovani pouziva velmi hodne
+      a i ve vyssich testech integracni/systemove je potreba vymenovat casti systemu  ("wiremock" atd.)
+
+  => co to je mock. Zastupny prazdny objekt, ktery predstira urcite chovani.
+      A jsme dokonce schopni se ho doptat, zda se do nej zavolalo.
+
+
