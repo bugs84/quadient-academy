@@ -19,6 +19,8 @@ public class GreeterTest {
         assertThat(greeting, equalTo("Hello, John!"));
     }
 
+    //TODO zvazit prepis do AssertJ
+    //TODO zvazit prepis do jUnit5
 
     // Co si z toho odnest:
     // 1) jak vytvorit test
