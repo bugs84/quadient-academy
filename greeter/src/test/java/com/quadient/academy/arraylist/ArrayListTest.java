@@ -36,6 +36,13 @@ public class ArrayListTest {
 
         //then
         assertThat(list, equalTo(new ArrayList<>(asList("Jaja", "Aja", "Missing"))));
+        
+        // 3) Když test spadne. Musí dát dobře najevo co bylo špatně. (build servery, očekávané chování)
+        //
+        // Output:
+        // java.lang.AssertionError:
+        // Expected: <[Jaja, Aja, Missing]>
+        //      but: was <[Jaja, Aja, Maja]>
     }
 
     @Test
@@ -51,6 +58,8 @@ public class ArrayListTest {
 
         // Output:
         // java.lang.AssertionError
+        //
+        // => krome toho, ze to spadlo nevime nic
     }
 
     @Test
