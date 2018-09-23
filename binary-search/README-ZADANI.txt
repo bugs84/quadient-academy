@@ -13,7 +13,7 @@ Testy vymyslete taky sami. - Není to test - Cíl je
     - naučit se napsat test
     - vyzkoušet si given-when-then
     - vyzkoušet si assertThat
-    - a pozor snažte napište test dřív než to naimplementujete ;)
+    - a pozor snažte se napsat test dřív, než implementaci ;)
 
     Začal bych například testem na to,
      že když hledam v prazdném listu, tak dostanu -1
