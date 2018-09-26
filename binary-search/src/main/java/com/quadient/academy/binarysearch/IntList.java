@@ -19,10 +19,27 @@ public class IntList {
      *
      * @param itemToFind the value to be searched for
      * @return index of the itemToFind, if it is contained in the List;
-     *         otherwise, <tt>-1</tt>.
+     * otherwise, <tt>-1</tt>.
      */
     public int binarySearch(int itemToFind) {
-        throw new UnsupportedOperationException("Not implemented");
+        switch (1) {
+            case 1:
+                return new IntListCorrectRecursive(list).binarySearch(itemToFind);
+            case 2:
+                return new IntListCorrectIterative(list).binarySearch(itemToFind);
+            case 3:
+                return new IntListIncorrectEmptyArrayReturnsMaxInt(list).binarySearch(itemToFind);
+            case 4:
+                return new IntListIncorrectInfiniteLoop(list).binarySearch(itemToFind);
+            case 5:
+                return new IntListIncorrectReturnValuesInsteadOfIndex(list).binarySearch(itemToFind);
+            case 6:
+                return new IntListIncorrectHigherInterval(list).binarySearch(itemToFind);
+            case 7:
+                return new IntListIncorrectLowerInterval(list).binarySearch(itemToFind);
+            default:
+                throw new IllegalStateException();
+        }
     }
 
 }
