@@ -1,9 +1,8 @@
 package com.quadient.academy.greeter;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class GreeterTest {
 
@@ -16,7 +15,7 @@ public class GreeterTest {
         String greeting = greeter.sayHello();
 
         // then
-        assertThat(greeting, equalTo("Hello, John!"));
+        assertThat(greeting).isEqualTo("Hello, John!");
     }
 
 
