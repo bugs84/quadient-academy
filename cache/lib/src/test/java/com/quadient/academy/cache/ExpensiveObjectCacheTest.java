@@ -1,26 +1,22 @@
 package com.quadient.academy.cache;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 
 import static java.util.Arrays.asList;
-import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 
-@SuppressWarnings({"WeakerAccess", "SameParameterValue"})
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class ExpensiveObjectCacheTest {
 
     public static final int CACHE_EXPIRATION_TIME = 5000;
@@ -36,16 +32,13 @@ public class ExpensiveObjectCacheTest {
 
     long currentTime = getTimeInMillis("21.3.2009 10:00:00");
 
-    public ExpensiveObjectCacheTest() throws ParseException {
-    }
-
     @Test
     public void getCachedObjectsReturnsEmptyCollectionWhenNothingWasAdded() {
         // when
         Collection<ExpensiveObject> cachedObjects = expensiveObjectCache.getCachedObjects();
 
         // then
-        assertThat(cachedObjects, is(emptyList()));
+        assertThat(cachedObjects).isEmpty();
     }
 
     @Test
@@ -57,7 +50,7 @@ public class ExpensiveObjectCacheTest {
         Collection<ExpensiveObject> cachedObjects = expensiveObjectCache.getCachedObjects();
 
         // then
-        assertThat(cachedObjects, equalTo(singletonList(expensiveObject1)));
+        assertThat(cachedObjects).isEqualTo(singletonList(expensiveObject1));
     }
 
     @Test
@@ -70,7 +63,7 @@ public class ExpensiveObjectCacheTest {
         Collection<ExpensiveObject> cachedObjects = expensiveObjectCache.getCachedObjects();
 
         // then
-        assertThat(cachedObjects, is(emptyList()));
+        assertThat(cachedObjects).isEmpty();
     }
 
     @Test
@@ -83,7 +76,7 @@ public class ExpensiveObjectCacheTest {
         Collection<ExpensiveObject> cachedObjects = expensiveObjectCache.getCachedObjects();
 
         // then
-        assertThat(cachedObjects, is(singletonList(expensiveObject1)));
+        assertThat(cachedObjects).isEqualTo(singletonList(expensiveObject1));
     }
 
     @Test
@@ -97,21 +90,21 @@ public class ExpensiveObjectCacheTest {
         Collection<ExpensiveObject> cachedObjects = expensiveObjectCache.getCachedObjects();
 
         // then
-        assertThat(cachedObjects, is(asList(expensiveObject1, expensiveObject2)));
+        assertThat(cachedObjects).isEqualTo(asList(expensiveObject1, expensiveObject2));
 
         // when
         wait(101);
         cachedObjects = expensiveObjectCache.getCachedObjects();
 
         // then
-        assertThat(cachedObjects, is(singletonList(expensiveObject2)));
+        assertThat(cachedObjects).isEqualTo(singletonList(expensiveObject2));
 
         // when
         wait(CACHE_EXPIRATION_TIME - 100);
         cachedObjects = expensiveObjectCache.getCachedObjects();
 
         // then
-        assertThat(cachedObjects, is(emptyList()));
+        assertThat(cachedObjects).isEmpty();
     }
 
     private void addObjectIntoCache(ExpensiveObject expensiveObject) {
