@@ -1,4 +1,4 @@
-package com.quadient.academy.mockintro.zoo.animals;
+package com.quadient.academy.giraffeoverview.zoo.animals;
 
 public class Giraffe {
     private String name;

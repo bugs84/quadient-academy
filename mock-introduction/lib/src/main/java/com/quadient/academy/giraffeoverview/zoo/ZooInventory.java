@@ -1,10 +1,10 @@
-package com.quadient.academy.mockintro.zoo;
+package com.quadient.academy.giraffeoverview.zoo;
 
-import com.quadient.academy.mockintro.zoo.animals.Elephant;
-import com.quadient.academy.mockintro.zoo.animals.Giraffe;
-import com.quadient.academy.mockintro.zoo.animals.Mouse;
-import com.quadient.academy.mockintro.zoo.animals.Snake;
-import com.quadient.academy.mockintro.zoo.animals.Zebra;
+import com.quadient.academy.giraffeoverview.zoo.animals.Elephant;
+import com.quadient.academy.giraffeoverview.zoo.animals.Giraffe;
+import com.quadient.academy.giraffeoverview.zoo.animals.Mouse;
+import com.quadient.academy.giraffeoverview.zoo.animals.Snake;
+import com.quadient.academy.giraffeoverview.zoo.animals.Zebra;
 
 import java.util.List;
 
@@ -16,16 +16,12 @@ public class ZooInventory {
     private List<Mouse> mice;
     private ElephantProvider elephantProvider;
 
-    //TODO notes
-    //A) neprijemna na mockovani
-    //B) kdyz se prida zvire, tak nam to rozbije giraffe counter
     public ZooInventory(
             List<Giraffe> giraffes,
             List<Zebra> zebras,
             List<Snake> snakes,
             List<Mouse> mouses,
-            ElephantProvider elephantProvider,
-            int i
+            ElephantProvider elephantProvider
     ) {
         if (snakes.isEmpty()) {
             throw new IllegalStateException("We must have Snake. Our zoo has snake in its emblem!");

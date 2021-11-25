@@ -1,7 +1,7 @@
-package com.quadient.academy.mockintro.overview;
+package com.quadient.academy.giraffeoverview.overview;
 
-import com.quadient.academy.mockintro.zoo.ZooInventory;
-import com.quadient.academy.mockintro.zoo.animals.Giraffe;
+import com.quadient.academy.giraffeoverview.zoo.ZooInventory;
+import com.quadient.academy.giraffeoverview.zoo.animals.Giraffe;
 
 import java.util.List;
 import java.util.stream.Collectors;

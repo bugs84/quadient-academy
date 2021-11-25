@@ -1,6 +1,6 @@
-package com.quadient.academy.mockintro.zoo;
+package com.quadient.academy.giraffeoverview.zoo;
 
-import com.quadient.academy.mockintro.zoo.animals.Elephant;
+import com.quadient.academy.giraffeoverview.zoo.animals.Elephant;
 
 import java.util.List;
 
