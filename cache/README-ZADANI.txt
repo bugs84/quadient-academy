@@ -27,7 +27,7 @@ Nepovinný úkol navíc:
   - Napsat testy, které odhalí případné chyby v synchronizaci.
     (při přístupu k třídě z více vláken)
 
-	
+
 Pozn. Poznámky k postupu řešení jsou v ukázkovém řešení.
 
 
