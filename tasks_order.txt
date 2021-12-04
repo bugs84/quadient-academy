@@ -1,7 +1,8 @@
-- greeter
+- greeter = Jak napsat test, základní zásady každého testu, given-when-then, seznameni s assertThat
     - Greeter
     - GreeterTest
     - ArrayListTest
-binary-search
-cache
-roulette
+binary-search = Procvičení základního psaní jednoduchých testů
+giraffe overview = Základní seznámení s tím na co jsou mocky
+cache = Mírně pokročilí příklad na použití mocků
+roulette = Procvičovací freestyle
