@@ -20,5 +20,5 @@ Nepovinný úkol navíc:
     (při přístupu k třídě z více vláken)
 
 
-Pozn. Poznámky k postupu řešení jsou v ukáykovém řešení.
+Pozn. Poznámky k postupu řešení jsou v ukázkovém řešení.
 
