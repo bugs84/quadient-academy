@@ -14,15 +14,8 @@ ale udělat alespoň jeden nebo dva testy na kterých bude vidět, jak by se tes
                                                                                    
 ## Postup
   1) Spustit testy v GiraffeOverviewTest (prázdné)
-  2) Odkomentovat test overviewContainsGiraffeNames() a zprovoznit (viz. TODO)   
+  2) Odkomentovat test overviewContainsGiraffeNames() a zprovoznit    
   3) Ukážu jiný způsob
 
 
-
-TODO sepsat záver
-  - víme co je mock a na co se dá použít
-  - víme, že existuje mockito a kde si ho nastujeme
-                   
-  - Mockovani je rychle, ale ne tak rychle jako čisté objekty
-  - giraffe builder
-  - Návod na mockito https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html 
+V Reseni ve GiraffeOverviewTest jsou další poznámky
