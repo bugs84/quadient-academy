@@ -9,8 +9,7 @@ import com.quadient.academy.giraffeoverview.zoo.animals.Snake;
 import com.quadient.academy.giraffeoverview.zoo.animals.Zebra;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
+import static java.util.Arrays.asList;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
@@ -24,36 +23,36 @@ class GiraffeOverviewTest {
 
     @Test
     void overviewContainsGiraffeNames() {
-        // given
-        ZooInventory zooInventory = null;//TODO create instance of zooInventory
-        GiraffeOverview giraffeOverview = new GiraffeOverview(zooInventory);
-
-        // when
-        String overview = giraffeOverview.generate();
-
-        // then
-        assertThat(overview).contains("Majda", "Aja");
+//        // given
+//        ZooInventory zooInventory = null; //TODO create instance of zooInventory "new ZooInventory(...)"
+//        GiraffeOverview giraffeOverview = new GiraffeOverview(zooInventory);
+//
+//        // when
+//        String overview = giraffeOverview.generate();
+//
+//        // then
+//        assertThat(overview).contains("All our giraffes: [Majda, Aja]");
     }
 
     @Test
-    void overviewContainsGiraffeNamesCreated() {
+    void overviewContainsGiraffeNamesCreatedByHand() {
         // given
         ZooInventory zooInventory = new ZooInventory(
-                Arrays.asList(
+                asList(
                         new Giraffe("Majda", 2, 2.56, 126),
                         new Giraffe("Aja", 4, 3.20, 192)
                 ),
-                Arrays.asList(
+                asList(
                         new Zebra()
                 ),
-                Arrays.asList(
+                asList(
                         new Snake()
                 ),
-                Arrays.asList(
+                asList(
                         new Mouse()
                 ),
                 new ElephantProvider(
-                        Arrays.asList(new Elephant())
+                        asList(new Elephant())
                 )
         );
 
@@ -63,7 +62,7 @@ class GiraffeOverviewTest {
         String overview = giraffeOverview.generate();
 
         // then
-        assertThat(overview).contains("Majda", "Aja");
+        assertThat(overview).contains("All our giraffes: [Majda, Aja]");
 
         //Některé problémy takového testu:
 //        - psát to je hrozný
@@ -80,12 +79,12 @@ class GiraffeOverviewTest {
     }
 
     @Test
-    void overviewContainsGiraffeNamesMocked() {
+    void overviewContainsGiraffeNamesCreatedByMock() {
         // given
         ZooInventory zooInventory = mock(ZooInventory.class);
 
         GiraffeOverview giraffeOverview = new GiraffeOverview(zooInventory);
-        given(zooInventory.getGiraffes()).willReturn(Arrays.asList(
+        given(zooInventory.getGiraffes()).willReturn(asList(
                 new Giraffe("Majda", 2, 2.56, 126),
                 new Giraffe("Aja", 4, 3.20, 192)
         ));
@@ -94,9 +93,7 @@ class GiraffeOverviewTest {
         String overview = giraffeOverview.generate();
 
         // then
-        assertThat(overview).contains("Majda", "Aja");
+        assertThat(overview).contains("All our giraffes: [Majda, Aja]");
     }
 
-
-    // poznamka mimo - giraffe builder
 }
