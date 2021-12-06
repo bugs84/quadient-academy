@@ -26,4 +26,8 @@ dependencies {
 tasks.test {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+    testLogging {
+        setEvents(setOf("passed", "skipped", "failed"))
+        setExceptionFormat("full")
+    }
 }
